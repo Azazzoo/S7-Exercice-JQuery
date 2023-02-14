@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Reduce Food Waste</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="JS.js"></script>
+</head>
+<body>
+<h1>J'ai déposé un nouvel item dans le réfrigérateur communautaire :</h1>
+<main class="container">
+    <div class="row">
+        <div class="col">
+            <form id="form" action="index.html" method="get">
+                <label class="bloc description">Courte description (max. 100 caractères)
+                    <input id="description" name="description" type="text"></label>
+                <label class="bloc category">Catégorie <br><select id="category" name="category">
+                    <option value="Dessert">Dessert</option>
+                    <option value="platPrincipal">Plat Principale</option>
+                    <option value="Entrée">Entrée</option>
+                </select></label>
+                <div id="portionsLayout">
+                    <div id="portionsLabel">
+                        <label for="portions">Portions disponibles<br>(min. 2 sauf pour les desserts)</label>
+                    </div>
+                    <input id="portions" name="portions" type="text">
+                </div>
+                <label class="bloc commentaire">Commentaire<br>(ex. instructions pour rechauffer)
+                    <textarea name="commentaire" id="commentaire" cols="40" rows="10"></textarea></label>
+                <label class="bloc identifiant">Mon Identifiant<br>(pour la tracabilite des aliments)
+                    <input id="identifiant" name="identifiant" type="text"></label>
+                <label class="flex svp"><input id="svp" name="svp" type="checkbox">
+                    &nbspSvp&nbspremettre&nbsp;mon&nbsp;plat&nbsp;dans&nbsp;le&nbsp;réfrigérateur</label>
+                <div class="flex submit-reset-container">
+                    <input type="submit" name="submit" value="Soumettre">
+                    <input type="reset" name="reset" value="Annuler">
+                </div>
+            </form>
+        </div>
+        <div id="fridge" class="col">
+            <div id="postit">
+                <p>test</p>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>
